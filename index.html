@@ -1,8 +1,9 @@
 <head>
   <title> </title>
   <script lang="javascript">
-      //Best One Green
-      function Roast() {
+    //Best One Green
+    function Roast() {
+      document.getElementById('Roasts').innerHTML = "";
       var Round = [1, 2, 3, 4, 5];
       var EndRound = Round[Math.floor(Math.random() * 5)];
       var RandomBodyParts = ['belly', 'nose', 'tooth', 'hair', 'foot', 'head', 'ears'];
@@ -45,22 +46,20 @@
         ];
         var RandomRoast = RandomRoasts[Math.floor(Math.random() * 3)];
         var finalRoast = RandomRoast + ' ' + RandomAdjective + '!!!';
-        var Stuff = nameForRoast + randomInsult + DnameForRoast + finalRoast;
-        console.log(Stuff);
+        var Stuff = nameForRoast + ": " + randomInsult + "<br />" + DnameForRoast + ": " + finalRoast;
+        var paragraph = document.createElement('P');
+        paragraph.innerHTML = Stuff;
+        document.getElementById('Roasts').appendChild(paragraph);
       }
       var Winners = [DnameForRoast, nameForRoast];
       var Winner = Winners[Math.floor(Math.random() * 2)];
-      var Final = Winner + randomInsult + Winner + 'Won!!!' + 'Other person: What? No!';
-
-      document.getElementById('RandomInsult').innerHTML = nameForRoast + ": " + randomInsult;
-      document.getElementById('Final').innerHTML = DnameForRoast + ': ' + finalRoast;
-      document.getElementById('Winner').innerHTML = Winner + 'Won!!! ' + 'Other person: What? No!';
+      var Final = Winner + ": " + randomInsult + "<br />" + Winner + " Won!!!" + " Other person: What? No!";
+      document.getElementById('Final').innerHTML = Final;
     }
   </script>
 </head>
 <body>
   <button onclick="Roast()">Roast someone!</button>
-  <p id="RandomInsult"></p>
+  <p id="Roasts"></p>
   <p id="Final"></p>
-  <p id="Winner"></p>
 </body>
