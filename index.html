@@ -23,10 +23,10 @@
       var RandomBodyPart = RandomBodyParts[Math.floor(Math.random() * 6)];
       var RandomAdjective = RandomAdjectives[Math.floor(Math.random() * 6)];
       var RandomWord = RandomWords[Math.floor(Math.random() * 6)];
-      var DnamesForRoasts = ['Brennan ', 'Shea ', 'Daddy ', 'Mommy ', 'Uncle Craig', 'Aunt Aisha', 'Uncle Ben', 'Uncle John', 'Autie Shosho', 'Soren', 'Oliva', 'Gabreil'];
-      var namesForRoasts = ['Brennan ', 'Shea ', 'Daddy ', 'Mommy ', 'Uncle Craig', 'Aunt Aisha', 'Uncle Ben', 'Uncle John', 'Autie Shosho', 'Soren', 'Oliva', 'Gabreil'];
-      var nameForRoast = namesForRoasts[Math.floor(Math.random() * 6)];
-      var DnameForRoast = DnamesForRoasts[Math.floor(Math.random() * 6)];
+      var DnamesForRoasts = ['Brennan ', 'Shea ', 'Daddy ', 'Mommy ', 'Uncle Craig', 'Aunt Aisha', 'Uncle Ben', 'Uncle John', 'Autie Shosho', 'Soren', 'Oliva', 'Gabreil', 'Neena'];
+      var namesForRoasts = ['Brennan ', 'Shea ', 'Daddy ', 'Mommy ', 'Uncle Craig', 'Aunt Aisha', 'Uncle Ben', 'Uncle John', 'Autie Shosho', 'Soren', 'Oliva', 'Gabreil', 'Neena'];
+      var nameForRoast = namesForRoasts[Math.floor(Math.random() * 13)];
+      var DnameForRoast = DnamesForRoasts[Math.floor(Math.random() * 13)];
       for (var i = 0; i < EndRound; i++) {
         var Smells = ['smells', 'looks'];
         var Smell = Smells[Math.floor(Math.random() * 2)];
@@ -66,7 +66,7 @@
       var Winner = Winners[Math.floor(Math.random() * 2)];
       var Final = Winner + ": " + randomInsult + "<br />" + Winner + " Won!!!" + " Other person: What? No!";
       document.getElementById('Final').innerHTML = Final;
-    }
+    }t
   </script>
 </head>
 <body>
