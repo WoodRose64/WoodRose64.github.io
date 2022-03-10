@@ -66,10 +66,40 @@
       var Winner = Winners[Math.floor(Math.random() * 2)];
       var Final = Winner + ": " + randomInsult + "<br />" + Winner + " Won!!!" + " Other person: What? No!";
       document.getElementById('Final').innerHTML = Final;
-    }
-  </script>
+    };
+<!DOCTYPE html>
+<html>
+<head>
+<script lang="javascript">
+function Ok() {
+document.getElementById('question').innerHTML = "";
+for (var i = 0; i < 6; i++) {
+var Places = ["home", "a friends house", "the beach", "the park", "a camp site", "a pool"];
+var things = ["birthday party", "Sleep over", "play date", "celebration of some sort"];
+var thing = things[Math.floor(Math.random() * 4)];
+var place = Places[Math.floor(Math.random() * 6)];
+var HaveYou = "have you ever had a " + thing + " at " + place + "?";
+var All = HaveYou + question;
+var question = prompt("If you have, type I have. If you have not, type Never, and try to imagine what it would be like. The question is " + HaveYou);
+if (question === "Never") {
+    alert("Imagine!");
+}
+if (question === "I have") {
+    alert("Nice! Picture what it was like in your mind!");
+};
+if (question === null) {
+    break;
+var paragrph = document.createElement('P');
+paragrph.innerHTML = question;
+document.getElementById('questions').appendChild(paragrph);
+};
+};
+};
+</script>
 </head>
 <body>
+<button onclick="Ok()">Question yourself</button>
+<p id="question"><p>
  <h1> My Roaster </h1>
    
    <h2> Press the button to activate </h2> 
